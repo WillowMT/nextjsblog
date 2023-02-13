@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Nav({ home = false }: { home?: boolean }) {
     return (
         <>
@@ -14,9 +16,9 @@ export default function Nav({ home = false }: { home?: boolean }) {
                 <div className="flex">
                     <li className="list-none mx-2 lg:mx-4 hover:cursor-pointer bg-blue-300 px-3 py-1 rounded-full border-[1px] border-white">
                         {home ? (
-                            <a href="/">Home</a>
+                            <Link href={"/"}>Home</Link>
                         ) : (
-                            <a href="/projects">Projects</a>
+                            <Link href="/projects">Projects</Link>
                         )}
                     </li>
                     <li className="list-none mx-2 lg:mx-4 hover:cursor-pointer bg-blue-300 px-3 py-1 rounded-full border-[1px] border-white">

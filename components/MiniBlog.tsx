@@ -5,8 +5,8 @@ export interface MiniBlogTypes {
     description: string;
     trending: boolean;
     slug: {
-        _type:string,
-        current:string
+        _type: string;
+        current: string;
     };
 }
 
@@ -18,13 +18,15 @@ export default function MiniBlog({
     trending,
     slug,
 }: MiniBlogTypes) {
-    
     return (
         <div className="py-8 flex flex-wrap md:flex-nowrap">
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                 <span className="font-semibold title-font text-white">
                     {categories.map((c) => (
-                        <span className="mr-2 bg-slate-500 px-2 py-1 rounded-lg font-mono text-center">
+                        <span
+                            key={1}
+                            className="mr-2 bg-slate-500 px-2 py-1 rounded-lg font-mono text-center"
+                        >
                             {c}
                         </span>
                     ))}
