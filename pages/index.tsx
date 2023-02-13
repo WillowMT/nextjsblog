@@ -41,6 +41,7 @@ export default function Home({ postdata }: any) {
                                 }: MiniBlogTypes) => {
                                     return (
                                         <MiniBlog
+                                            key={1}
                                             categories={categories}
                                             date={date}
                                             title={title}
